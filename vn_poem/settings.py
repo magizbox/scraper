@@ -9,10 +9,10 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'crawl_vn_poems'
+BOT_NAME = 'vn_poem'
 
-SPIDER_MODULES = ['crawl_vn_poems.spiders']
-NEWSPIDER_MODULE = 'crawl_vn_poems.spiders'
+SPIDER_MODULES = ['vn_poem.spiders']
+NEWSPIDER_MODULE = 'vn_poem.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'crawl_vn_poems (+http://www.yourdomain.com)'
