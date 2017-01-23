@@ -21,7 +21,11 @@ for poem in poems:
     title = poem["title"]
     title = title.replace("*", "")
     title = title.replace(".", "")
+    title = title.replace("?", "")
     text = poem["text"]
     filepath = os.path.join(data_folder, author, title + ".txt")
     if not os.path.exists(filepath):
-        open(filepath, "wb").write(text.encode("utf-8"))
+        try:
+            open(filepath, "wb").write(text.encode("utf-8"))
+        except Exception, e:
+            print e

@@ -7,10 +7,17 @@ class ListPoemSpider(CrawlSpider):
     name = "list_poem"
     # allowed_domains = ["http://poem.tkaraoke.com/"]
     start_urls = [
-        'http://poem.tkaraoke.com/10102/Nguyen_Khuyen/',
-        'http://poem.tkaraoke.com/10020/Tan_Da/',
-        'http://poem.tkaraoke.com/10077/Ho_Xuan_Huong/',
-        'http://poem.tkaraoke.com/10012/Xuan_Dieu/'
+        # 'http://poem.tkaraoke.com/10102/Nguyen_Khuyen/',
+        # 'http://poem.tkaraoke.com/10020/Tan_Da/',
+        # 'http://poem.tkaraoke.com/10077/Ho_Xuan_Huong/',
+        # 'http://poem.tkaraoke.com/10012/Xuan_Dieu/',
+        'http://poem.tkaraoke.com/10163/Phan_Boi_Chau/',
+        'http://poem.tkaraoke.com/10332/The_Lu/',
+        'http://poem.tkaraoke.com/10005/Han_Mac_Tu/',
+        'http://poem.tkaraoke.com/10022/Nguyen_Binh/',
+        'http://poem.tkaraoke.com/10003/Huy_Can/',
+        'http://poem.tkaraoke.com/10079/Che_Lan_Vien/',
+        'http://poem.tkaraoke.com/11410/To_Huu/'
     ]
 
     def parse(self, response):
