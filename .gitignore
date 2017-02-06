@@ -25,6 +25,7 @@
 
 ## File-based project format:
 *.iws
+/vn_news/raw_data/data.jl
 
 ## Plugin-specific files:
 
