@@ -1,0 +1,3 @@
+5 lỗi đặt mật khẩu có thể khiến bạn mất dữ liệu trong nháy mắt
+Kết quả từ một cuộc khảo sát của trang web quản lý mật khẩu Lastpass.com cho thấy, có đến gần 80% người Mỹ chỉ sử dụng duy nhất một mật khẩu cho tất cả tài khoản cá nhân của mình.
+Thử so sánh và kiểm tra lại xem, bạn có vô tình để lọt dữ liệu khi mắc một trong các lỗi đặt mật khẩu cho tài khoản cá nhân của mình không nhé. Doãn Hải Hưng 

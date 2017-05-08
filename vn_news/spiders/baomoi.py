@@ -3,11 +3,14 @@ import re
 from scrapy.spiders import CrawlSpider
 import scrapy
 
+from vn_news.spiders.baomoi_article import BaomoiArticleSpider
 
-class BaomoiArticleSpider(CrawlSpider):
+
+class BaomoiSpider(CrawlSpider):
     name = "baomoi"
     # allowed_domains = ["http://poem.tkaraoke.com/"]
     start_urls = [
+        "http://www.baomoi.com/feed.rss"
         "http://www.baomoi.com/xa-hoi.rss",
         "http://www.baomoi.com/the-gioi.rss",
         "http://www.baomoi.com/van-hoa.rss",
@@ -21,17 +24,11 @@ class BaomoiArticleSpider(CrawlSpider):
         "http://www.baomoi.com/xe-co.rss",
         "http://www.baomoi.com/nha-dat.rss"
     ]
+    article_parser = BaomoiArticleSpider()
 
     def parse(self, response):
         self.logger.info('==> %s', response.url)
         article_pages = response.xpath('//guid/text()').extract()
         for next_page in article_pages:
-            yield scrapy.Request(response.urljoin(next_page), callback=self.parse_article)
+            yield scrapy.Request(response.urljoin(next_page), callback=self.article_parser.parse)
 
-    def parse_article(self, response):
-        self.logger.info('==> %s', response.url)
-        url = response.url
-        id = re.compile(".*/(\d+).epi").match(url).groups()[0]
-        content = u"\n".join(response.css(".body ::text").extract() + response.css(".sapo ::text").extract())
-        title = response.css("h1 ::text").extract_first()
-        yield {"url": url, "id": id, "title": title, "content": content}
