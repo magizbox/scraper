@@ -1,0 +1,31 @@
+name: crawl_vn_news
+channels:
+- !!python/unicode
+  'defaults'
+dependencies:
+- !!python/unicode
+  'mkl=2017.0.1=0'
+- !!python/unicode
+  'numpy=1.12.1=py27_0'
+- !!python/unicode
+  'pandas=0.20.1=np112py27_0'
+- !!python/unicode
+  'pip=9.0.1=py27_1'
+- !!python/unicode
+  'python=2.7.11=5'
+- !!python/unicode
+  'python-dateutil=2.6.0=py27_0'
+- !!python/unicode
+  'pytz=2017.2=py27_0'
+- !!python/unicode
+  'requests=2.13.0=py27_0'
+- !!python/unicode
+  'setuptools=27.2.0=py27_1'
+- !!python/unicode
+  'six=1.10.0=py27_0'
+- !!python/unicode
+  'vs2008_runtime=9.00.30729.5054=0'
+- !!python/unicode
+  'wheel=0.29.0=py27_0'
+prefix: !!python/unicode 'C:\ProgramData\Anaconda2\envs\crawl_vn_news'
+
