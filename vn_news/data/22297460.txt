@@ -1,0 +1,2 @@
+Nghi vấn WannaCry liên quan đến Triều Tiên
+Một nhóm nghiên cứu an ninh mạng cho biết họ đã phát hiện trong phần mềm độc hại WannaCry có mã tương tự với loại vi-rút tấn công được phát triển bởi nhóm hacker Lazarus, được cho là có liên quan đến Triều Tiên.
