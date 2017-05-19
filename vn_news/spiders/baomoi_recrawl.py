@@ -1,15 +1,13 @@
 import re
 
-from os.path import join
+from os.path import join, dirname
 from scrapy.spiders import CrawlSpider
 import scrapy
 
 
 class BaomoiArticleSpider(CrawlSpider):
     name = "baomoi"
-    # allowed_domains = ["http://poem.tkaraoke.com/"]
-
-    folder = "D:/PycharmProjects/crawl_vn_news/vn_news"
+    folder = dirname(dirname(__file__))
     filepath = join(folder, "pipelines", "crawled_urls.txt")
     start_urls = [line.strip() for line in open(filepath, "r").readlines()]
 
