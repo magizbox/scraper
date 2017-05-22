@@ -1,6 +1,6 @@
 # Vietnamese News Corpus
 
-* 14275 documents from website [www.baomoi.com](http://www.baomoi.com/)
+* 14316 documents from website [www.baomoi.com](http://www.baomoi.com/)
 * 12 categories: xã hội, thế giới, văn hóa, kinh tế, giáo dục, thể thao, giải trí, pháp luật, khoa học - công nghệ, đời sống, xe cộ, nhà đất
 
 ## Examples
