@@ -1,0 +1,3 @@
+Hàng triệu smartphone Samsung có nguy cơ bị tấn công
+Theo nhà nghiên cứu bảo mật João Gouveia, hiện tại có khoảng 2,1 triệu thiết bị Samsung đang đối mặt với nguy cơ bị tấn công.
+Cụ thể, những dòng điện thoại Samsung được sản xuất trước năm 2014 đều được tích hợp sẵn ứng dụng S Suggest, tuy nhiên phần mềm này đã bị dừng hỗ trợ từ lâu, thậm chí cả tên miền ssuggest.com cũng không được Samsung gia hạn. Điều này đồng nghĩa với việc tội phạm mạng có thể mua tên miền và sử dụng nó để phát tán phần mềm độc hại, gây ảnh hưởng nghiêm trọng đến hàng triệu người dùng. NGUYỄN MINH  
