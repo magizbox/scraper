@@ -1,0 +1,2 @@
+Bài toán tính số lượng gà đang nhặt thóc trên sân khiến bạn bị rối
+Có một bài toán tính số lượng mỗi loại gà đang nhặt thóc trên sân. Các bạn thử làm nhé! Bài toán như sau: Đàn gà nhặt thóc trên sân Tung tăng chạy nhảy khó phân rõ màu Theo chân một đốm ba con trắng, Theo chân một trắng, năm gà nâu Một trăm bảy mốt cái đầu Bao nhiêu mỗi loại? Tính mau nhận quà. Phan Duy Nghĩa (Sở GD-ĐT Hà Tĩnh) 
