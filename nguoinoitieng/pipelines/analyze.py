@@ -9,5 +9,5 @@ counter = df.groupby("job").count().reset_index().sort_values("name", ascending=
 counter["count"] = counter["name"]
 del counter["url"]
 del counter["name"]
-counter.to_excel("../tmp/analysis.xlsx")
+counter.to_excel("../tmp/analysis.xlsx", index=False)
 print(counter)

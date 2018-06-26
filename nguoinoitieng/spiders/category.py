@@ -8,19 +8,13 @@ from nguoinoitieng.spiders.item import ItemSpider
 
 class CategorySpider(CrawlSpider):
     name = "nguoinoitieng"
-    dates_init = [
-        (1, 31), (2, 29), (3, 31), (4, 30), (5, 31), (6, 30),
-        (7, 31), (8, 31), (9, 30), (10, 31), (11, 30), (12, 31)
+    congiaps = [
+        "ty", "suu", "dan", "mao", "thin", "ti",
+        "ngo", "mui", "than", "dau", "tuat", "hoi"
     ]
-    dates = []
-    for date in dates_init:
-        month, days = date
-        for day in range(1, days + 1):
-            dates.append("{}-{}".format(day, month))
 
     start_urls = [
-        # "http://nguoinoitieng.tv/sinh-ngay/1-1"
-        "http://nguoinoitieng.tv/sinh-ngay/{}/".format(date) for date in dates
+        "http://nguoinoitieng.tv/con-giap/{}".format(congiap) for congiap in congiaps
     ]
     item_parser = ItemSpider()
 
