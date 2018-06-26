@@ -136,3 +136,5 @@ ENV/
 .ropeproject
 
 /corpus.titles/corpus-title.txt
+nguoinoitieng/tmp
+!nguoinoitieng/tmp/.gitkeep
