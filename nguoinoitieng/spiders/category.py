@@ -40,12 +40,3 @@ class CategorySpider(CrawlSpider):
             yield scrapy.Request(next_url, callback=self.parse)
         except:
             pass
-
-        # for item in items:
-        #     try:
-        #         url = item.css(".tennnt::attr('href')").extract_first()
-        #         url = response.urljoin(url)
-        #         # yield {"url": url}
-        #     except:
-        #         pass
-
