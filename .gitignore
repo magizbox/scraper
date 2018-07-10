@@ -136,7 +136,7 @@ ENV/
 .ropeproject
 
 /corpus.titles/corpus-title.txt
-target/raw_data
-!target/raw_data/.gitkeep
-target/tmp
-!target/tmp/.gitkeep
+site/raw_data
+!site/raw_data/.gitkeep
+site/tmp
+!site/tmp/.gitkeep

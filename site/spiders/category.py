@@ -3,7 +3,7 @@ import re
 from scrapy.spiders import CrawlSpider
 import scrapy
 
-from target.spiders.item import ItemSpider
+from site.spiders.item import ItemSpider
 
 
 class CategorySpider(CrawlSpider):

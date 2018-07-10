@@ -1,20 +1,18 @@
 import re
 from scrapy.spiders import CrawlSpider
-from os.path import join, dirname
+# from os.path import join, dirname
 import json
 
-DATA_FOLDER = join(dirname(dirname(dirname(__file__))), "target", "raw_data")
 
 
 def urls():
-    for i in range(1, 100000):
+    for i in range(1600000, 1700000):
         # yield "http://www.hosocongty.vn/a-com-68.htm"
         yield "http://www.hosocongty.vn/a-com-{}.htm".format(i)
 
 
 class ItemSpider(CrawlSpider):
     name = "hosocongty"
-    join(dirname(__file__))
 
     start_urls = urls()
 
@@ -26,13 +24,17 @@ class ItemSpider(CrawlSpider):
         closed_text = response.css(".companyDetail span:contains('Đã đóng mã số thuế')::text").extract()
         status = "deactive" if len(closed_text) > 0 else "active"
         bank_info = response.css(".companyDetail p:contains('Số TK') strong::text").extract()
-
-        license_number = response.css(".companyDetail li:contains('Giấy phép kinh doanh') a::text").extract_first()
-        start_date = response.css(".companyDetail li:contains('Giấy phép kinh doanh')::text").extract()[1]
         try:
+            license_number = response.css(".companyDetail li:contains('Giấy phép kinh doanh') a::text").extract_first()
+        except Exception as e:
+            print("Cannot parse license_number")
+            license_number = ""
+        try:
+            start_date = response.css(".companyDetail li:contains('Giấy phép kinh doanh')::text").extract()[1]
             start_date = re.search(r"\d+\/\d+/\d+", start_date).group()
         except Exception as e:
-            print("Cannot parse date in ", start_date)
+            print("Cannot parse date")
+            start_date = ""
         ceo = response.css(".companyDetail li:contains('Giám đốc') a::text").extract_first()
         phone_numbers = response.css(".companyDetail li:contains('Điện thoại:') strong::text").extract()
         phone_numbers = [phone for phone in phone_numbers if phone not in "hide"]
