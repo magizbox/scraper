@@ -9,10 +9,10 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'nguoinoitieng'
+BOT_NAME = 'website'
 
-SPIDER_MODULES = ['nguoinoitieng.spiders']
-NEWSPIDER_MODULE = 'nguoinoitieng.spiders'
+SPIDER_MODULES = ['website.spiders']
+NEWSPIDER_MODULE = 'website.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'crawl_vn_newss (+http://www.yourdomain.com)'
@@ -82,7 +82,7 @@ CONCURRENT_REQUESTS = 64
 
 # Enable and configure HTTP caching (disabled by default)
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
-HTTPCACHE_ENABLED = True
+HTTPCACHE_ENABLED = False
 HTTPCACHE_EXPIRATION_SECS = 3600
 # HTTPCACHE_EXPIRATION_SECS = 0
 # HTTPCACHE_DIR = 'httpcache'
