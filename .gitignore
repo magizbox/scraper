@@ -134,9 +134,3 @@ ENV/
 
 # Rope project settings
 .ropeproject
-
-/corpus.titles/corpus-title.txt
-site/raw_data
-!site/raw_data/.gitkeep
-site/tmp
-!site/tmp/.gitkeep
