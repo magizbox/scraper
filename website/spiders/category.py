@@ -7,7 +7,6 @@ from website.spiders.items import ItemSpider
 
 
 class CategorySpider(CrawlSpider):
-    name = "nguoinoitieng"
     congiaps = [
         "ty", "suu", "dan", "mao", "thin", "ti",
         "ngo", "mui", "than", "dau", "tuat", "hoi"
