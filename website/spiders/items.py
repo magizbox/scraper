@@ -6,9 +6,13 @@ import json
 
 
 def urls():
-    for i in range(1, int(1e6)):
-        # yield "http://www.hosocongty.vn/a-com-68.htm"
-        yield f"https://micro-services.vntrip.vn/search-engine/search/vntrip-hotel-availability/?hotel_ids={i}&check_in_date=20181220&nights=1"
+    seo_codes = [
+        "a",
+        "ba-ria-vung-tau"
+    ]
+    for seo_code in seo_codes:
+        for id in range(1, 25):
+            yield f"https://micro-services.vntrip.vn/search-engine/search/vntrip-hotel-availability/?seo_code={seo_code}&check_in_date=20181220&nights=1&page={id}&page_size=200&request_source=web_frontend"
 
 
 class ItemSpider(CrawlSpider):
@@ -20,13 +24,25 @@ class ItemSpider(CrawlSpider):
         url = response.url
         output = {}
         try:
-            data = json.loads(response.text)["data"][0]
-            output["name"] = data["name"]
-            output["address"] = data["full_address"]
-            output["url"] = url
+            data = json.loads(response.text)
+            locations = data["ext_data"]["count_by_cities"]
+            items = data["data"]
+            for item in items:
+                try:
+                    city_id = str(item["city_id"])
+                    location = locations[city_id]
+                    output["name"] = item["name"]
+                    output["star"] = item["star_rate"]
+                    output["type"] = item["type"]
+                    output["address"] = item["full_address"]
+                    output["province"] = location["province_name"]
+                    output["city"] = location["name"]
+                    output["url"] = url
+                    yield output
+                except:
+                    pass
         except:
             print("Error")
-            output = {}
         # mst = response.css(".companyDetail p:contains('Mã số thuế') strong a::text").extract_first()
         # address = response.css(".companyDetail p:contains('Địa chỉ') strong::text").extract_first()
         # closed_text = response.css(".companyDetail span:contains('Đã đóng mã số thuế')::text").extract()
@@ -49,4 +65,3 @@ class ItemSpider(CrawlSpider):
         # category_names = response.css(".box_content table tr td:nth-child(2) a::text").extract()
         # category_ids = response.css(".box_content table tr td:nth-child(3)::text").extract()[1:]
         # categories = list(zip(category_names, category_ids))
-        yield output
